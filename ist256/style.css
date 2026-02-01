@@ -125,4 +125,22 @@ thead {
     background-color: var(--primary-color);
     color: white;
 }
+/* animation for elements */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+ 
+section[id] {
+    scroll-margin-top: 80px;
+}
+ 
+/* add responsive design */
+@media (min-width: 768px) {
+    body { padding: 40px; }
+}
+ 
+@media (min-width: 1024px) {
+    nav ul { justify-content: flex-end; }
+}
  

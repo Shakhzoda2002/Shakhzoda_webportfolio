@@ -108,3 +108,21 @@ input:focus,
      border-color: #aaa;
 
  }
+ /* style the tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+ 
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+ 
+thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+ 

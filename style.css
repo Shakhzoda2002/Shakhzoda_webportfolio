@@ -2,162 +2,94 @@
 Name: Shakhzoda Ziyadullaeva
 Student ID: 989906355
 Course Name: IST 256
-Assignment Title: Personal Portfolio
+Assignment Title: Personal Portfolio (JS Enhancement)
 Submission Date: 2/1/2026
 GitHub Repository: https://github.com/Shakhzoda2002/Shakhzoda_webportfolio
 */
 
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Variables */
-:root {
-    --primary-color: #2c3e50;
-    --secondary-color: #6c757d;
-}
-
-/* Body */
+/* Base */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #fdfbfb;
-    color: #222;
-    padding: 20px;
-}
-
-/* Center content WITHOUT breaking Bootstrap navbar */
-main,
-header,
-section,
-aside {
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(120deg, #f5f7ff, #ffffff, #eef1ff);
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* Header */
 header {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 30px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    text-align: center;
+  background: linear-gradient(120deg, #0b1220, #111827);
+  color: white;
 }
 
-header img {
-    border-radius: 50%;
-    margin-bottom: 10px;
+header h1 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-/* Sections */
-section {
-    margin-bottom: 30px;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    padding: 25px;
-    animation: fadeIn 0.9s ease-in;
+header p {
+  opacity: 0.9;
 }
 
-aside {
-    margin-bottom: 30px;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    padding: 25px;
+/* Card-style sections */
+main section {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Headings */
-h1, h2, h3, h4 {
-    margin-bottom: 10px;
-    color: var(--primary-color);
+main section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 
-/* Paragraph */
-p {
-    margin-bottom: 10px;
+/* Active nav link */
+.nav-link.active {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
-/* Links */
-a {
-    color: var(--primary-color);
-    text-decoration: none;
+/* Back to top */
+#backToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: none;
+  z-index: 999;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Make iframes responsive on small screens */
+iframe {
+  max-width: 100%;
+  border-radius: 12px;
 }
 
-/* Tables */
-table {
-    width: 100%;
-    border-collapse: collapse;
+/* Dark mode */
+:root[data-theme="dark"] body {
+  background: #121212;
+  color: #f1f1f1;
 }
 
-th,
-td {
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: left;
+:root[data-theme="dark"] header {
+  background: linear-gradient(120deg, #000000, #1a1a1a);
 }
 
-thead {
-    background-color: var(--primary-color);
-    color: white;
+:root[data-theme="dark"] main section {
+  background: #1e1e1e;
+  box-shadow: none;
 }
 
-/* Forms */
-form {
-    margin-top: 10px;
+:root[data-theme="dark"] .table {
+  color: #f1f1f1;
 }
 
-input,
-textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
+/* Responsive padding */
+@media (max-width: 768px) {
+  main section {
+    padding: 18px;
+  }
 }
-
-input:focus,
-textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-/* Cards */
-.card {
-    background-color: white;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    border-color: var(--secondary-color);
-}
-
-/* Animation */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* Responsive */
-@media (min-width: 768px) {
-    body {
-        padding: 40px;
-    }
-}
-
- 
